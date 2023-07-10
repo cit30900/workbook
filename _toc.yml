@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: dev_environment/index
+  sections:
+  - file: dev_environment/windows
+  - file: dev_environment/mac
