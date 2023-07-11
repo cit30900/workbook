@@ -332,7 +332,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -348,6 +350,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-powershell">Install PowerShell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-chocolatey-a-windows-package-manager">Install Chocolatey (a Windows package manager)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-python">Use Chocolatey to Install Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenv">Install virtualenv</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -359,6 +372,61 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="creating-a-development-environment-on-windows">
 <h1>Creating a Development Environment on Windows<a class="headerlink" href="#creating-a-development-environment-on-windows" title="Permalink to this heading">#</a></h1>
+<p>Follow the steps below to install the software you will need for this course.</p>
+<p>You must be running Windows 10 or 11 for this software to run.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You will need to know the administrator username and password for your computer for some of these installations!</p>
+</div>
+<section id="install-powershell">
+<h2>Install PowerShell<a class="headerlink" href="#install-powershell" title="Permalink to this heading">#</a></h2>
+<p>You will install PowerShell first. We’ll work with PowerShell later in the semester, but we’ll use it now to help install other software.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3">PowerShell installation instructions</a></p>
+<ul class="simple">
+<li><p>If your computer does not have “Winget”, use the MSI package installer</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Restart your computer after installing PowerShell!</p>
+</div>
+</section>
+<section id="install-chocolatey-a-windows-package-manager">
+<h2>Install Chocolatey (a Windows package manager)<a class="headerlink" href="#install-chocolatey-a-windows-package-manager" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Run PowerShell <em>as an administrator</em> on your computer</p></li>
+<li><p>Copy and paste the following command into PowerShell:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span><span class="o">-</span><span class="n">ExecutionPolicy</span> <span class="n">Bypass</span> <span class="o">-</span><span class="n">Scope</span> <span class="n">Process</span> <span class="o">-</span><span class="n">Force</span><span class="p">;</span> <span class="p">[</span><span class="n">System</span><span class="o">.</span><span class="n">Net</span><span class="o">.</span><span class="n">ServicePointManager</span><span class="p">]::</span><span class="n">SecurityProtocol</span> <span class="o">=</span> <span class="p">[</span><span class="n">System</span><span class="o">.</span><span class="n">Net</span><span class="o">.</span><span class="n">ServicePointManager</span><span class="p">]::</span><span class="n">SecurityProtocol</span> <span class="o">-</span><span class="n">bor</span> <span class="mi">3072</span><span class="p">;</span> <span class="n">iex</span> <span class="p">((</span><span class="n">New</span><span class="o">-</span><span class="n">Object</span> <span class="n">System</span><span class="o">.</span><span class="n">Net</span><span class="o">.</span><span class="n">WebClient</span><span class="p">)</span><span class="o">.</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://community.chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="use-chocolatey-to-install-python">
+<h2>Use Chocolatey to Install Python<a class="headerlink" href="#use-chocolatey-to-install-python" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
+<li><p>Use the following command to install Python:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">python</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Restart your computer after installing Python!</p>
+</div>
+</section>
+<section id="install-virtualenv">
+<h2>Install virtualenv<a class="headerlink" href="#install-virtualenv" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
+<li><p>Use the following command to install virtualenv:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -420,6 +488,23 @@ document.write(`
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-powershell">Install PowerShell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-chocolatey-a-windows-package-manager">Install Chocolatey (a Windows package manager)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-python">Use Chocolatey to Install Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenv">Install virtualenv</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -438,7 +523,7 @@ By Rob Elliott
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
