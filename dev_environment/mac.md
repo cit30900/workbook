@@ -107,12 +107,13 @@ pip install virtualenvwrapper
 3. Once virtualenvwrapper is installed, copy and paste EACH of the following commands in the Terminal window (one at a time):
 
 * `export WORKON_HOME=$HOME/.envs`
+* `source /usr/local/bin/virtualenvwrapper.sh`
 
 (devenv:mac:virtualenvironment)=
 ## Create a Virtual Environment
-Use `virtualenvwrapper-win` to create a new virtual environment for this course.
+Use `virtualenvwrapper` to create a new virtual environment for this course.
 
-1. Open a Command Prompt *as an adminstrator* on your computer
+1. Open a Terminal on your computer
 2. Use the following command to create a virtual environment named `cit30900env`:
 
 ```
@@ -121,7 +122,7 @@ mkvirtualenv cit30900env
 
 The previous command created **and activated** your virtual environment. You will know that your environment is activated because its name appears in parentheses before your command prompt in the terminal window. See the example below:
 
-```{image} img/win-active-ve.png
+```{image} img/mac-active-ve.png
 :alt: An active virtual environment displayed at the command prompt
 :align: center
 ```
@@ -135,11 +136,10 @@ File management is going to be **extremely** important in this course! Please be
 ```
 
 (devenv:mac:git)=
-## Use Chocolatey to Install Git
-1. Open a Command Prompt *as an adminstrator* on your computer
+## Use Homebrew to Install Git
+1. Open a Terminal on your computer
 2. Use the following command to install Git:
 
 ```
-choco install git
+brew install git
 ```
-3. Answer `Y` to each script installation (or `A` to accept all at once)
