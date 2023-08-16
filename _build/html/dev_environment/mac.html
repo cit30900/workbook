@@ -159,6 +159,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Your Development Environment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="windows.html">Creating a Development Environment on Windows</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating a Development Environment on a Mac</a></li>
+
 </ul>
 </li>
 </ul>
@@ -331,7 +332,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -347,6 +350,27 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Creating a Development Environment on a Mac</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Creating a Development Environment on a Mac</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-homebrew">Install Homebrew</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-homebrew-to-install-python">Use Homebrew to Install Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-shortcuts-to-python-and-pip">Add Shortcuts to Python and Pip</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenv">Install virtualenv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenvwrapper">Install virtualenvwrapper</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-virtual-environment">Create a Virtual Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory">Create a Root Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-homebrew-to-install-git">Use Homebrew to Install Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-visual-studio-code">Install Visual Studio Code</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -362,8 +386,155 @@ document.write(`
 <li><p>Install Homebrew</p></li>
 <li><p>Use Homebrew to Install Python</p></li>
 <li><p>brew unlink python</p></li>
-<li><p>brew link –overwrite python&#64;3.11</p></li>
+<li><p>brew link –overwrite python</p></li>
+<li><p>cd /usr/local/bin</p></li>
+<li><p>ln -s python3 python</p></li>
+<li><p>ln -s pip3 pip</p></li>
 </ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Creating a Development Environment on a Mac<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Follow the steps below to install the software you will need for this course.</p>
+<p>These commands should work on all modern Mac computers. Some commands may be slightly different depending on the processor your Mac has (Intel or Apple Silicon). When necessary, use the instructions that match your processor.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You will need to know the administrator username and password for your computer for some of these installations!</p>
+</div>
+<p>Steps to set up your development environment:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#devenv-mac-homebrew"><span class="std std-ref">Install Homebrew</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-python"><span class="std std-ref">Use Homebrew to Install Python</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-symlinks"><span class="std std-ref">Add Shortcuts to Python and Pip</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-virtualenv"><span class="std std-ref">Install virtualenv</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-virtualenvwrapper"><span class="std std-ref">Install virtualenvwrapper</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-virtualenvironment"><span class="std std-ref">Create a Virtual Environment</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-rootdirectory"><span class="std std-ref">Create a Root Directory</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-git"><span class="std std-ref">Use Homebrew to Install Git</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-mac-vscode"><span class="std std-ref">Install Visual Studio Code</span></a></p></li>
+</ol>
+<section id="install-homebrew">
+<span id="devenv-mac-homebrew"></span><h2>Install Homebrew<a class="headerlink" href="#install-homebrew" title="Permalink to this heading">#</a></h2>
+<p>Homebrew is a package manager for Mac computers. It helps you install, update, and uninstall system software.</p>
+<ol class="arabic simple">
+<li><p>Open a new Terminal window</p></li>
+<li><p>Copy and paste the following command into the Terminal window</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Input your administrative password when asked</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After installing Homebrew, <strong>READ THE MESSAGES PROVIDED</strong>. The installer will give you two commands that you should copy and paste into the Terminal window.</p>
+<p>The first command will start with:
+<code class="docutils literal notranslate"><span class="pre">(echo;</span> <span class="pre">echo</span> <span class="pre">'eval</span> <span class="pre">&quot;$(/usr/local/bin/brew</span> <span class="pre">shellenv)&quot;')</span> <span class="pre">&gt;&gt;</span> <span class="pre">...</span></code></p>
+<p>The second will look like:
+<code class="docutils literal notranslate"><span class="pre">eval</span> <span class="pre">&quot;$(/usr/local/bin/brew</span> <span class="pre">shellenv)&quot;</span></code></p>
+<p>The specific commands will differ based on your individual computer. Please read the feedback and execute the commands provided.</p>
+</div>
+</section>
+<section id="use-homebrew-to-install-python">
+<span id="devenv-mac-python"></span><h2>Use Homebrew to Install Python<a class="headerlink" href="#use-homebrew-to-install-python" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open a new Terminal window</p></li>
+<li><p>Copy and paste the following command into the Terminal window</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After installing Python, you should restart your shell. Copy and paste the following command into the Terminal window:
+<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.zshrc</span></code></p>
+</div>
+<p>This installation also installed Pip, which is a Python package manager. We’ll use Pip to install additional Python libraries throughout the semester.</p>
+</section>
+<section id="add-shortcuts-to-python-and-pip">
+<span id="devenv-mac-symlinks"></span><h2>Add Shortcuts to Python and Pip<a class="headerlink" href="#add-shortcuts-to-python-and-pip" title="Permalink to this heading">#</a></h2>
+<p>You now have Python installed and can run Python by using the command <code class="docutils literal notranslate"><span class="pre">python3</span></code> at a Terminal prompt.</p>
+<p>You will create shortcuts so that the keyword <code class="docutils literal notranslate"><span class="pre">python</span></code> will execute <code class="docutils literal notranslate"><span class="pre">python3</span></code>, and the keyword <code class="docutils literal notranslate"><span class="pre">pip</span></code> will execute <code class="docutils literal notranslate"><span class="pre">pip3</span></code>.</p>
+<ol class="arabic simple">
+<li><p>Open a Terminal on your computer</p></li>
+<li><p>Copy and paste EACH of the following commands into your Terminal (one at a time)</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">unlink</span> <span class="pre">python</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">link</span> <span class="pre">--overwrite</span> <span class="pre">python</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/usr/local/bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">python3</span> <span class="pre">python</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">pip3</span> <span class="pre">pip</span></code></p></li>
+</ul>
+</section>
+<section id="install-virtualenv">
+<span id="devenv-mac-virtualenv"></span><h2>Install virtualenv<a class="headerlink" href="#install-virtualenv" title="Permalink to this heading">#</a></h2>
+<p>You will create a virtual environment to use in this course. This environment will manage all the Python packages that are installed throughout the course so that you can easily uninstall them all later if needed.</p>
+<ol class="arabic simple">
+<li><p>Open a Terminal on your computer</p></li>
+<li><p>Copy and paste the following command to install virtualenv:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+</section>
+<section id="install-virtualenvwrapper">
+<span id="devenv-mac-virtualenvwrapper"></span><h2>Install virtualenvwrapper<a class="headerlink" href="#install-virtualenvwrapper" title="Permalink to this heading">#</a></h2>
+<p>You’ll also install a helper package that simplifies many of the commands related to your virtual environment.</p>
+<ol class="arabic simple">
+<li><p>Open a Terminal on your computer</p></li>
+<li><p>Copy and paste the following command to install virtualenvwrapper:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenvwrapper</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Once virtualenvwrapper is installed, copy and paste EACH of the following commands in the Terminal window (one at a time):</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">WORKON_HOME=$HOME/.envs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/usr/local/bin/virtualenvwrapper.sh</span></code></p></li>
+</ul>
+</section>
+<section id="create-a-virtual-environment">
+<span id="devenv-mac-virtualenvironment"></span><h2>Create a Virtual Environment<a class="headerlink" href="#create-a-virtual-environment" title="Permalink to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code> to create a new virtual environment for this course.</p>
+<ol class="arabic simple">
+<li><p>Open a Terminal on your computer</p></li>
+<li><p>Use the following command to create a virtual environment named <code class="docutils literal notranslate"><span class="pre">cit30900env</span></code>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">cit30900env</span>
+</pre></div>
+</div>
+<p>The previous command created <strong>and activated</strong> your virtual environment. You will know that your environment is activated because its name appears in parentheses before your command prompt in the terminal window. See the example below:</p>
+<img alt="An active virtual environment displayed at the command prompt" class="align-center" src="../_images/mac-active-ve.png" />
+</section>
+<section id="create-a-root-directory">
+<span id="devenv-mac-rootdirectory"></span><h2>Create a Root Directory<a class="headerlink" href="#create-a-root-directory" title="Permalink to this heading">#</a></h2>
+<p>You will create a directory that you will use as your <strong>root directory</strong> for this course. This directory can be anywhere on your computer. We will refer to your <strong>root directory</strong> through the remainder of the semester.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>File management is going to be <strong>extremely</strong> important in this course! Please be aware of the specific file and directory paths that are used</p>
+</div>
+</section>
+<section id="use-homebrew-to-install-git">
+<span id="devenv-mac-git"></span><h2>Use Homebrew to Install Git<a class="headerlink" href="#use-homebrew-to-install-git" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open a Terminal on your computer</p></li>
+<li><p>Use the following command to install Git:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+</section>
+<section id="install-visual-studio-code">
+<span id="devenv-mac-vscode"></span><h2>Install Visual Studio Code<a class="headerlink" href="#install-visual-studio-code" title="Permalink to this heading">#</a></h2>
+<p>I <em>strongly</em> recommend that you use Visual Studio Code as your IDE for this course. All tutorials and examples will use VS Code, and functionality of the IDE will be referred to frequently.</p>
+<p>Visual Studio Code is <em>a different software package</em> than “Visual Studio”. VS Code is free and open source.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/download">Download the correct VS Code for your operating system and processor</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -415,6 +586,33 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Creating a Development Environment on a Mac</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Creating a Development Environment on a Mac</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-homebrew">Install Homebrew</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-homebrew-to-install-python">Use Homebrew to Install Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-shortcuts-to-python-and-pip">Add Shortcuts to Python and Pip</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenv">Install virtualenv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenvwrapper">Install virtualenvwrapper</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-virtual-environment">Create a Virtual Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory">Create a Root Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-homebrew-to-install-git">Use Homebrew to Install Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-visual-studio-code">Install Visual Studio Code</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

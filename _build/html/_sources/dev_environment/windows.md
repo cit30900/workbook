@@ -12,6 +12,10 @@ Steps to set up your development environment:
 1. {ref}`devenv:windows:powershell`
 2. {ref}`devenv:windows:chocolatey`
 3. {ref}`devenv:windows:python`
+4. {ref}`devenv:windows:virtualenv`
+5. {ref}`devenv:windows:virtualenvwrapper-win`
+6. {ref}`devenv:windows:virtualenvironment`
+7. {ref}`devenv:windows:rootdirectory`
 
 (devenv:windows:powershell)=
 ## Install PowerShell
@@ -94,3 +98,21 @@ You will create a directory that you will use as your **root directory** for thi
 ```{important}
 File management is going to be **extremely** important in this course! Please be aware of the specific file and directory paths that are used
 ```
+
+(devenv:windows:git)=
+## Use Chocolatey to Install Git
+1. Open a Command Prompt *as an adminstrator* on your computer
+2. Use the following command to install Git:
+
+```
+choco install git
+```
+3. Answer `Y` to each script installation (or `A` to accept all at once)
+
+(devenv:windows:vscode)=
+## Install Visual Studio Code
+I *strongly* recommend that you use Visual Studio Code as your IDE for this course. All tutorials and examples will use VS Code, and functionality of the IDE will be referred to frequently.
+
+Visual Studio Code is *a different software package* than "Visual Studio". VS Code is free and open source.
+
+* [Download the correct VS Code for your operating system and processor](https://code.visualstudio.com/download)

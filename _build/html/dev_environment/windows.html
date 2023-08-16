@@ -160,6 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Your Development Environment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating a Development Environment on Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mac.html">Creating a Development Environment on a Mac</a></li>
+
 </ul>
 </li>
 </ul>
@@ -362,6 +363,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenvwrapper-win">Install virtualenvwrapper-win</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-virtual-environment">Create a Virtual Environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory">Create a Root Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-git">Use Chocolatey to Install Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-visual-studio-code">Install Visual Studio Code</a></li>
 </ul>
             </nav>
         </div>
@@ -386,6 +389,10 @@ document.write(`
 <li><p><a class="reference internal" href="#devenv-windows-powershell"><span class="std std-ref">Install PowerShell</span></a></p></li>
 <li><p><a class="reference internal" href="#devenv-windows-chocolatey"><span class="std std-ref">Install Chocolatey (a Windows package manager)</span></a></p></li>
 <li><p><a class="reference internal" href="#devenv-windows-python"><span class="std std-ref">Use Chocolatey to Install Python</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-windows-virtualenv"><span class="std std-ref">Install virtualenv</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-windows-virtualenvwrapper-win"><span class="std std-ref">Install virtualenvwrapper-win</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-windows-virtualenvironment"><span class="std std-ref">Create a Virtual Environment</span></a></p></li>
+<li><p><a class="reference internal" href="#devenv-windows-rootdirectory"><span class="std std-ref">Create a Root Directory</span></a></p></li>
 </ol>
 <section id="install-powershell">
 <span id="devenv-windows-powershell"></span><h2>Install PowerShell<a class="headerlink" href="#install-powershell" title="Permalink to this heading">#</a></h2>
@@ -472,6 +479,27 @@ document.write(`
 <p>File management is going to be <strong>extremely</strong> important in this course! Please be aware of the specific file and directory paths that are used</p>
 </div>
 </section>
+<section id="use-chocolatey-to-install-git">
+<span id="devenv-windows-git"></span><h2>Use Chocolatey to Install Git<a class="headerlink" href="#use-chocolatey-to-install-git" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
+<li><p>Use the following command to install Git:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Answer <code class="docutils literal notranslate"><span class="pre">Y</span></code> to each script installation (or <code class="docutils literal notranslate"><span class="pre">A</span></code> to accept all at once)</p></li>
+</ol>
+</section>
+<section id="install-visual-studio-code">
+<span id="devenv-windows-vscode"></span><h2>Install Visual Studio Code<a class="headerlink" href="#install-visual-studio-code" title="Permalink to this heading">#</a></h2>
+<p>I <em>strongly</em> recommend that you use Visual Studio Code as your IDE for this course. All tutorials and examples will use VS Code, and functionality of the IDE will be referred to frequently.</p>
+<p>Visual Studio Code is <em>a different software package</em> than “Visual Studio”. VS Code is free and open source.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/download">Download the correct VS Code for your operating system and processor</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -548,6 +576,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenvwrapper-win">Install virtualenvwrapper-win</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-virtual-environment">Create a Virtual Environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory">Create a Root Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-git">Use Chocolatey to Install Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-visual-studio-code">Install Visual Studio Code</a></li>
 </ul>
   </nav></div>
 
