@@ -20,12 +20,13 @@ You will need to know the administrator username and password for your computer 
 
 Steps to set up your development environment:
 1. {ref}`devenv:mac:homebrew`
-2. {ref}`devenv:mac:chocolatey`
-3. {ref}`devenv:mac:python`
+2. {ref}`devenv:mac:python`
+3. {ref}`devenv:mac:symlinks`
 4. {ref}`devenv:mac:virtualenv`
-5. {ref}`devenv:mac:virtualenvwrapper-win`
+5. {ref}`devenv:mac:virtualenvwrapper`
 6. {ref}`devenv:mac:virtualenvironment`
 7. {ref}`devenv:mac:rootdirectory`
+7. {ref}`devenv:mac:git`
 
 (devenv:mac:homebrew)=
 ## Install Homebrew
