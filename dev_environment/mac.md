@@ -26,7 +26,8 @@ Steps to set up your development environment:
 5. {ref}`devenv:mac:virtualenvwrapper`
 6. {ref}`devenv:mac:virtualenvironment`
 7. {ref}`devenv:mac:rootdirectory`
-7. {ref}`devenv:mac:git`
+8. {ref}`devenv:mac:git`
+9. {ref}`devenv:mac:vscode`
 
 (devenv:mac:homebrew)=
 ## Install Homebrew
@@ -144,3 +145,11 @@ File management is going to be **extremely** important in this course! Please be
 ```
 brew install git
 ```
+
+(devenv:mac:vscode)=
+## Install Visual Studio Code
+I *strongly* recommend that you use Visual Studio Code as your IDE for this course. All tutorials and examples will use VS Code, and functionality of the IDE will be referred to frequently.
+
+Visual Studio Code is *a different software package* than "Visual Studio". VS Code is free and open source.
+
+* [Download the correct VS Code for your operating system and processor](https://code.visualstudio.com/download)
