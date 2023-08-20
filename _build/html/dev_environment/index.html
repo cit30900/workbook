@@ -64,8 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'dev_environment/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating a Development Environment on Windows" href="windows.html" />
-    <link rel="prev" title="CIT 30900 Workbook" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/30900_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/30900_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -156,11 +154,30 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Your Development Environment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="windows.html">Creating a Development Environment on Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mac.html">Creating a Development Environment on a Mac</a></li>
-
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating a Development Environment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="windows/index.html">Using Windows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="windows/1_setup.html">Install Setup Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/2_python.html">Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/3_virtualenv.html">Establish a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/4_root_git.html">Establish a Root Directory and Install Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/5_github.html">Create a GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/6_connect_github.html">Connect Your GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/7_vscode.html">Install the IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/8_use_terminal_in_vscode.html">Use the Command Prompt in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/9_congrats.html">Congratulations!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mac/index.html">Using a Mac</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/1_setup.html">Install Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/2_python.html">Install Python on MacOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/3_virtualenv.html">Establish a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/4_git.html">Establish a Root Directory and Install Git on MacOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/5_github.html">Create a GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/6_connect_github.html">Connect Your GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/7_vscode.html">Install Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/8_use_terminal_in_vscode.html">Use MacOS Terminal in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/9_congrats.html">Congratulations!</a></li>
 </ul>
 </li>
 </ul>
@@ -363,8 +380,8 @@ document.write(`
 <p>You are required to install several software packages on your personal computer to complete the work in this course. These packages include <em>Python</em> (and various Python libraries), <em>Git</em>, and <em>Visual Studio Code</em>. All of the software required by this course is free to students.</p>
 <p>Installation instructions will vary based on your computer’s operating system. Please select the appropriate set of instructions based on your operating system from the list:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="windows.html"><span class="doc">Creating a Development Environment on Windows</span></a></p></li>
-<li><p><a class="reference internal" href="mac.html"><span class="doc">Creating a Development Environment on a Mac</span></a></p></li>
+<li><p><span class="xref std std-doc">../dev_environment/windows/1_setup.md</span></p></li>
+<li><p><span class="xref std std-doc">../dev_environment/mac/1_setup.md</span></p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -401,24 +418,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../intro.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CIT 30900 Workbook</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="windows.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Creating a Development Environment on Windows</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>

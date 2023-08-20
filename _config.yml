@@ -4,7 +4,7 @@
 title: CIT 30900 Workbook
 author: Rob Elliott
 copyright: "2023"
-logo: logo.png
+logo: img/30900_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

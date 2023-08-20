@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Use MacOS Terminal in Visual Studio Code &#8212; CIT 30900 Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'dev_environment/mac/8_use_terminal_in_vscode';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Congratulations!" href="9_congrats.html" />
+    <link rel="prev" title="Install Visual Studio Code" href="7_vscode.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/30900_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/30900_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    CIT 30900 Workbook
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating a Development Environment</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../windows/index.html">Using Windows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../windows/1_setup.html">Install Setup Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/2_python.html">Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/3_virtualenv.html">Establish a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/4_root_git.html">Establish a Root Directory and Install Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/5_github.html">Create a GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/6_connect_github.html">Connect Your GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/7_vscode.html">Install the IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/8_use_terminal_in_vscode.html">Use the Command Prompt in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/9_congrats.html">Congratulations!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Using a Mac</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_setup.html">Install Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_python.html">Install Python on MacOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_virtualenv.html">Establish a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_git.html">Establish a Root Directory and Install Git on MacOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_github.html">Create a GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_connect_github.html">Connect Your GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_vscode.html">Install Visual Studio Code</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Use MacOS Terminal in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_congrats.html">Congratulations!</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cit30900/workbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cit30900/workbook/issues/new?title=Issue%20on%20page%20%2Fdev_environment/mac/8_use_terminal_in_vscode.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/dev_environment/mac/8_use_terminal_in_vscode.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Use MacOS Terminal in Visual Studio Code</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-a-terminal-in-visual-studio-code">Open a Terminal in Visual Studio Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory-for-this-course">Create a Root Directory for this Course</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-create-a-root-directory-using-the-terminal">Option 1: Create a Root Directory Using the Terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-create-a-root-directory-using-the-graphical-user-interface">Option 2: Create a Root Directory Using the Graphical User Interface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-your-virtual-environment-in-vs-code">Activate Your Virtual Environment in VS Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-test-file">Create a Test File</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="use-macos-terminal-in-visual-studio-code">
+<h1>Use MacOS Terminal in Visual Studio Code<a class="headerlink" href="#use-macos-terminal-in-visual-studio-code" title="Permalink to this heading">#</a></h1>
+<p>Now that you have VS Code installed, you can use its user interface to create and edit files as well as interact with the MacOS Terminal.</p>
+<section id="open-a-terminal-in-visual-studio-code">
+<span id="devenv-mac-vscode-panel"></span><h2>Open a Terminal in Visual Studio Code<a class="headerlink" href="#open-a-terminal-in-visual-studio-code" title="Permalink to this heading">#</a></h2>
+<p>You can split the VS Code view to show both the file editor as well as the MacOS Terminal. To do this, you will open the bottom panel in VS Code and show the Terminal.</p>
+<ol class="arabic">
+<li><p>From the top right of the menu bar in VS Code, choose the <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Panel</span></code> icon:</p>
+<img alt="Visual Studio Code's toggle panel icon" class="align-center" src="../../_images/vscode_toggle_panel.png" />
+</li>
+</ol>
+<ul class="simple">
+<li><p>Alternatively, you can press <code class="docutils literal notranslate"><span class="pre">Ctrl+J</span></code></p></li>
+</ul>
+<ol class="arabic" start="2">
+<li><p>If it is not already selected, choose the “Terminal” tab at the top of the VS Code panel.</p>
+<img alt="Visual Studio Code's tab bar in the panel with the Terminal (4th tab) highlighted" class="align-center" src="../../_images/vscode_terminal.png" />
+</li>
+<li><p>You should now see MacOS command prompt in the Terminal within VS Code. Your terminal prompt will be unique to you, but may be as simple as <code class="docutils literal notranslate"><span class="pre">~</span> <span class="pre">%</span></code>. This is where you can issue Linux commands to your MacOS Terminal.</p></li>
+</ol>
+</section>
+<section id="create-a-root-directory-for-this-course">
+<span id="devenv-mac-root-directory"></span><h2>Create a Root Directory for this Course<a class="headerlink" href="#create-a-root-directory-for-this-course" title="Permalink to this heading">#</a></h2>
+<p>Create a root directory on your computer that you will use as your “home base” for all of the files you work with in this course.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will hear me refer to this specific directory as your “root directory” or “local root directory” throughout this course!</p>
+</div>
+<p>By default, your Terminal prompt is at the user’s home directory in MacOS. You can create a new directory at this location or you can create a directory somewhere else on your computer.</p>
+<p>You can create your root directory in one of two ways: through the Terminal, or through the Graphical User Interface.</p>
+<section id="option-1-create-a-root-directory-using-the-terminal">
+<span id="devenv-mac-root-directory-terminal"></span><h3>Option 1: Create a Root Directory Using the Terminal<a class="headerlink" href="#option-1-create-a-root-directory-using-the-terminal" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>From the Terminal prompt in VS Code, type <code class="docutils literal notranslate"><span class="pre">ls</span></code>. This will show you all of the directories and files stored within your currently active directory.</p></li>
+</ol>
+<ul class="simple">
+<li><p>You likely will see common MacOS directories such as <code class="docutils literal notranslate"><span class="pre">Desktop</span></code> and <code class="docutils literal notranslate"><span class="pre">Documents</span></code> here.</p></li>
+</ul>
+<p>Think about the location on your computer where it makes the most sense for you to store your files. Say, for example, that you want to create your root directory <em>inside</em> your Documents directory. We’ll use that as our example.</p>
+<ol class="arabic simple" start="2">
+<li><p>From the command prompt, navigate into the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> directory with the following command: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Documents</span></code></p></li>
+<li><p>Then enter the command <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">cit30900</span></code> at the command prompt.</p></li>
+<li><p>Move into the newly-created directory with the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">cit30900</span></code></p></li>
+<li><p>You should see that your command prompt has changed and now includes the current directory. Your prompt will look something like <code class="docutils literal notranslate"><span class="pre">Documents/cit30900</span> <span class="pre">%</span></code></p></li>
+</ol>
+</section>
+<section id="option-2-create-a-root-directory-using-the-graphical-user-interface">
+<span id="devenv-mac-root-directory-gui"></span><h3>Option 2: Create a Root Directory Using the Graphical User Interface<a class="headerlink" href="#option-2-create-a-root-directory-using-the-graphical-user-interface" title="Permalink to this heading">#</a></h3>
+<p>Think about the location on your computer where it makes the most sense for you to store your files. Say, for example, that you want to create your root directory <em>inside</em> your Documents directory. We’ll use that as our example.</p>
+<ol class="arabic simple">
+<li><p>Using Finder on your MacOS, open your <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder.</p></li>
+<li><p>Create a new folder named <code class="docutils literal notranslate"><span class="pre">cit30900</span></code> inside your <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder.</p></li>
+<li><p><strong>Right-click</strong> on your newly-created <code class="docutils literal notranslate"><span class="pre">cit30900</span></code> folder and choose “New Terminal at Folder”</p></li>
+</ol>
+<p>This will launch a MacOS Terminal window and set the current working directory to your <code class="docutils literal notranslate"><span class="pre">cit30900</span></code> directory.</p>
+<p>To open this directory in VS Code, do the following:</p>
+<ol class="arabic simple" start="4">
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">.</span></code> (make sure you include the <code class="docutils literal notranslate"><span class="pre">.</span></code>) at the command prompt.</p></li>
+</ol>
+<p>This will open VS Code and set the active workspace to your <code class="docutils literal notranslate"><span class="pre">cit30900</span></code> directory. It <em>should</em> have also opened the VS Code panel and set the current working directory to your <code class="docutils literal notranslate"><span class="pre">cit30900</span></code> directory.</p>
+</section>
+</section>
+<section id="activate-your-virtual-environment-in-vs-code">
+<span id="devenv-mac-activate-venv-vscode"></span><h2>Activate Your Virtual Environment in VS Code<a class="headerlink" href="#activate-your-virtual-environment-in-vs-code" title="Permalink to this heading">#</a></h2>
+<p>You need to activate your virtual environment to ensure all of the Python packages you have downloaded will be available to you.</p>
+<ol class="arabic simple">
+<li><p>At the Terminal prompt <strong>in VS Code</strong> use the command to activate the virtual environment you created:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">cit30900env</span>
+</pre></div>
+</div>
+<p>You should now see the name of your virtual environment appear prior to the command prompt in your VS Code terminal window.</p>
+<img alt="An active virtual environment displayed at the command prompt in Visual Studio Code on the Mac" class="align-center" src="../../_images/mac-vscode-active-ve.png" />
+</section>
+<section id="create-a-test-file">
+<span id="devenv-mac-test-file"></span><h2>Create a Test File<a class="headerlink" href="#create-a-test-file" title="Permalink to this heading">#</a></h2>
+<p>Regardless of the method you chose above, you should be ready to write and store code in VS Code. Create a test file to show the connection between the Terminal and your file editor in VS Code.</p>
+<ol class="arabic simple">
+<li><p>Ensure you are in your <code class="docutils literal notranslate"><span class="pre">cit30900</span></code> root directory.</p></li>
+</ol>
+<p>When you installed VS Code, it added a special command that you can use to create and open a new file with a single command.</p>
+<ol class="arabic simple" start="2">
+<li><p>At the command prompt, type <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">helloworld.py</span></code>.</p></li>
+</ol>
+<p>You should see a file open in the file editor at the top of the VS Code window.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are asked to trust the authors of any files, you should respond positively.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Enter a simple Python <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement into your file:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Save your file using the VS Code <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, or by pressing <code class="docutils literal notranslate"><span class="pre">Command+S</span></code></p></li>
+<li><p>To see that the file is now saved in your local root directory, type the following at the command prompt: <code class="docutils literal notranslate"><span class="pre">ls</span></code></p></li>
+</ol>
+<p>You should see the file <code class="docutils literal notranslate"><span class="pre">helloworld.py</span></code> appear. As you add more directories and files, they will be displayed when you “list” (<code class="docutils literal notranslate"><span class="pre">ls</span></code>) your files.</p>
+<ol class="arabic simple" start="6">
+<li><p>Run your Python file with the following command in the VS Code terminal:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>You should see your message output in the Terminal window.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./dev_environment/mac"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="7_vscode.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Install Visual Studio Code</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="9_congrats.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Congratulations!</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-a-terminal-in-visual-studio-code">Open a Terminal in Visual Studio Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory-for-this-course">Create a Root Directory for this Course</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-create-a-root-directory-using-the-terminal">Option 1: Create a Root Directory Using the Terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-create-a-root-directory-using-the-graphical-user-interface">Option 2: Create a Root Directory Using the Graphical User Interface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-your-virtual-environment-in-vs-code">Activate Your Virtual Environment in VS Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-test-file">Create a Test File</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rob Elliott
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -64,8 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'dev_environment/windows';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating a Development Environment on a Mac" href="mac.html" />
-    <link rel="prev" title="Your Development Environment" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/30900_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/30900_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -156,11 +154,30 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Your Development Environment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating a Development Environment on Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mac.html">Creating a Development Environment on a Mac</a></li>
-
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating a Development Environment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="windows/index.html">Using Windows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="windows/1_setup.html">Install Setup Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/2_python.html">Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/3_virtualenv.html">Establish a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/4_root_git.html">Establish a Root Directory and Install Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/5_github.html">Create a GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/6_connect_github.html">Connect Your GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/7_vscode.html">Install the IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/8_use_terminal_in_vscode.html">Use MacOS Terminal in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/9_congrats.html">Congratulations!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mac/index.html">Using a Mac</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/1_setup.html">Install Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/2_python.html">Install Python on MacOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/3_virtualenv.html">Establish a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/4_git.html">Establish a Root Directory and Install Git on MacOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/5_github.html">Create a GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/6_connect_github.html">Connect Your GitHub.com Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/7_vscode.html">Install Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/8_use_terminal_in_vscode.html">Use MacOS Terminal in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/9_congrats.html">Congratulations!</a></li>
 </ul>
 </li>
 </ul>
@@ -333,9 +350,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -351,22 +366,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-powershell">Install PowerShell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-chocolatey-a-windows-package-manager">Install Chocolatey (a Windows package manager)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-python">Use Chocolatey to Install Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenv">Install virtualenv</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenvwrapper-win">Install virtualenvwrapper-win</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-virtual-environment">Create a Virtual Environment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory">Create a Root Directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-git">Use Chocolatey to Install Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-visual-studio-code">Install Visual Studio Code</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -386,120 +385,16 @@ document.write(`
 </div>
 <p>Steps to set up your development environment:</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="#devenv-windows-powershell"><span class="std std-ref">Install PowerShell</span></a></p></li>
-<li><p><a class="reference internal" href="#devenv-windows-chocolatey"><span class="std std-ref">Install Chocolatey (a Windows package manager)</span></a></p></li>
-<li><p><a class="reference internal" href="#devenv-windows-python"><span class="std std-ref">Use Chocolatey to Install Python</span></a></p></li>
-<li><p><a class="reference internal" href="#devenv-windows-virtualenv"><span class="std std-ref">Install virtualenv</span></a></p></li>
-<li><p><a class="reference internal" href="#devenv-windows-virtualenvwrapper-win"><span class="std std-ref">Install virtualenvwrapper-win</span></a></p></li>
-<li><p><a class="reference internal" href="#devenv-windows-virtualenvironment"><span class="std std-ref">Create a Virtual Environment</span></a></p></li>
-<li><p><a class="reference internal" href="#devenv-windows-rootdirectory"><span class="std std-ref">Create a Root Directory</span></a></p></li>
+<li><p><a class="reference internal" href="windows/1_setup.html#devenv-windows-powershell"><span class="std std-ref">Install PowerShell</span></a></p></li>
+<li><p><a class="reference internal" href="windows/1_setup.html#devenv-windows-chocolatey"><span class="std std-ref">Install Chocolatey (a Windows package manager)</span></a></p></li>
+<li><p><a class="reference internal" href="windows/2_python.html#devenv-windows-python"><span class="std std-ref">Use Chocolatey to Install Python</span></a></p></li>
+<li><p><a class="reference internal" href="windows/3_virtualenv.html#devenv-windows-virtualenv"><span class="std std-ref">Install virtualenv</span></a></p></li>
+<li><p><a class="reference internal" href="windows/3_virtualenv.html#devenv-windows-virtualenvwrapper-win"><span class="std std-ref">Install virtualenvwrapper-win</span></a></p></li>
+<li><p><a class="reference internal" href="windows/3_virtualenv.html#devenv-windows-virtualenvironment"><span class="std std-ref">Create a Virtual Environment</span></a></p></li>
+<li><p><a class="reference internal" href="windows/4_root_git.html#devenv-windows-rootdirectory"><span class="std std-ref">Create a Root Directory</span></a></p></li>
+<li><p><a class="reference internal" href="windows/4_root_git.html#devenv-windows-git"><span class="std std-ref">Install Git on Windows</span></a></p></li>
+<li><p><a class="reference internal" href="windows/7_vscode.html#devenv-windows-vscode"><span class="std std-ref">Install Visual Studio Code</span></a></p></li>
 </ol>
-<section id="install-powershell">
-<span id="devenv-windows-powershell"></span><h2>Install PowerShell<a class="headerlink" href="#install-powershell" title="Permalink to this heading">#</a></h2>
-<p>You will install PowerShell first. We’ll work with PowerShell later in the semester, but we’ll use it now to help install other software.</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3">PowerShell installation instructions</a></p>
-<ul class="simple">
-<li><p>If your computer does not have “Winget”, use the MSI package installer</p></li>
-</ul>
-</li>
-</ol>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Restart your computer after installing PowerShell!</p>
-</div>
-</section>
-<section id="install-chocolatey-a-windows-package-manager">
-<span id="devenv-windows-chocolatey"></span><h2>Install Chocolatey (a Windows package manager)<a class="headerlink" href="#install-chocolatey-a-windows-package-manager" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Run PowerShell <em>as an administrator</em> on your computer</p></li>
-<li><p>Copy and paste the following command into PowerShell:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span><span class="o">-</span><span class="n">ExecutionPolicy</span> <span class="n">Bypass</span> <span class="o">-</span><span class="n">Scope</span> <span class="n">Process</span> <span class="o">-</span><span class="n">Force</span><span class="p">;</span> <span class="p">[</span><span class="n">System</span><span class="o">.</span><span class="n">Net</span><span class="o">.</span><span class="n">ServicePointManager</span><span class="p">]::</span><span class="n">SecurityProtocol</span> <span class="o">=</span> <span class="p">[</span><span class="n">System</span><span class="o">.</span><span class="n">Net</span><span class="o">.</span><span class="n">ServicePointManager</span><span class="p">]::</span><span class="n">SecurityProtocol</span> <span class="o">-</span><span class="n">bor</span> <span class="mi">3072</span><span class="p">;</span> <span class="n">iex</span> <span class="p">((</span><span class="n">New</span><span class="o">-</span><span class="n">Object</span> <span class="n">System</span><span class="o">.</span><span class="n">Net</span><span class="o">.</span><span class="n">WebClient</span><span class="p">)</span><span class="o">.</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://community.chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</section>
-<section id="use-chocolatey-to-install-python">
-<span id="devenv-windows-python"></span><h2>Use Chocolatey to Install Python<a class="headerlink" href="#use-chocolatey-to-install-python" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
-<li><p>Use the following command to install Python:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">python</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>Answer <code class="docutils literal notranslate"><span class="pre">Y</span></code> to each script installation (or <code class="docutils literal notranslate"><span class="pre">A</span></code> to accept all at once)</p></li>
-</ol>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Restart your computer after installing Python!</p>
-</div>
-</section>
-<section id="install-virtualenv">
-<span id="devenv-windows-virtualenv"></span><h2>Install virtualenv<a class="headerlink" href="#install-virtualenv" title="Permalink to this heading">#</a></h2>
-<p>You will create a virtual environment to use in this course. This environment will manage all the Python packages that are installed throughout the course so that you can easily uninstall them all later if needed.</p>
-<ol class="arabic simple">
-<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
-<li><p>Use the following command to install virtualenv:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
-</pre></div>
-</div>
-</section>
-<section id="install-virtualenvwrapper-win">
-<span id="devenv-windows-virtualenvwrapper-win"></span><h2>Install virtualenvwrapper-win<a class="headerlink" href="#install-virtualenvwrapper-win" title="Permalink to this heading">#</a></h2>
-<p>You’ll also install a helper package that simplifies many of the commands related to your virtual environment.</p>
-<ol class="arabic simple">
-<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
-<li><p>Use the following command to install virtualenvwrapper-win:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenvwrapper</span><span class="o">-</span><span class="n">win</span>
-</pre></div>
-</div>
-</section>
-<section id="create-a-virtual-environment">
-<span id="devenv-windows-virtualenvironment"></span><h2>Create a Virtual Environment<a class="headerlink" href="#create-a-virtual-environment" title="Permalink to this heading">#</a></h2>
-<p>Use <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper-win</span></code> to create a new virtual environment for this course.</p>
-<ol class="arabic simple">
-<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
-<li><p>Use the following command to create a virtual environment named <code class="docutils literal notranslate"><span class="pre">cit30900env</span></code>:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">cit30900env</span>
-</pre></div>
-</div>
-<p>The previous command created <strong>and activated</strong> your virtual environment. You will know that your environment is activated because its name appears in parentheses before your command prompt in the terminal window. See the example below:</p>
-<img alt="An active virtual environment displayed at the command prompt" class="align-center" src="../_images/win-active-ve.png" />
-</section>
-<section id="create-a-root-directory">
-<span id="devenv-windows-rootdirectory"></span><h2>Create a Root Directory<a class="headerlink" href="#create-a-root-directory" title="Permalink to this heading">#</a></h2>
-<p>You will create a directory that you will use as your <strong>root directory</strong> for this course. This directory can be anywhere on your computer. We will refer to your <strong>root directory</strong> through the remainder of the semester.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>File management is going to be <strong>extremely</strong> important in this course! Please be aware of the specific file and directory paths that are used</p>
-</div>
-</section>
-<section id="use-chocolatey-to-install-git">
-<span id="devenv-windows-git"></span><h2>Use Chocolatey to Install Git<a class="headerlink" href="#use-chocolatey-to-install-git" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Open a Command Prompt <em>as an adminstrator</em> on your computer</p></li>
-<li><p>Use the following command to install Git:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">git</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>Answer <code class="docutils literal notranslate"><span class="pre">Y</span></code> to each script installation (or <code class="docutils literal notranslate"><span class="pre">A</span></code> to accept all at once)</p></li>
-</ol>
-</section>
-<section id="install-visual-studio-code">
-<span id="devenv-windows-vscode"></span><h2>Install Visual Studio Code<a class="headerlink" href="#install-visual-studio-code" title="Permalink to this heading">#</a></h2>
-<p>I <em>strongly</em> recommend that you use Visual Studio Code as your IDE for this course. All tutorials and examples will use VS Code, and functionality of the IDE will be referred to frequently.</p>
-<p>Visual Studio Code is <em>a different software package</em> than “Visual Studio”. VS Code is free and open source.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://code.visualstudio.com/download">Download the correct VS Code for your operating system and processor</a></p></li>
-</ul>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -533,24 +428,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Your Development Environment</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="mac.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Creating a Development Environment on a Mac</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -560,28 +437,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-powershell">Install PowerShell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-chocolatey-a-windows-package-manager">Install Chocolatey (a Windows package manager)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-python">Use Chocolatey to Install Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenv">Install virtualenv</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-virtualenvwrapper-win">Install virtualenvwrapper-win</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-virtual-environment">Create a Virtual Environment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-root-directory">Create a Root Directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-chocolatey-to-install-git">Use Chocolatey to Install Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-visual-studio-code">Install Visual Studio Code</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -3,8 +3,28 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: dev_environment/index
-  sections:
-  - file: dev_environment/windows
-  - file: dev_environment/mac
+parts:
+  - caption: Creating a Development Environment
+    chapters:
+    - file: dev_environment/windows/index
+      sections:
+      - file: dev_environment/windows/1_setup
+      - file: dev_environment/windows/2_python
+      - file: dev_environment/windows/3_virtualenv
+      - file: dev_environment/windows/4_root_git
+      - file: dev_environment/windows/5_github
+      - file: dev_environment/windows/6_connect_github
+      - file: dev_environment/windows/7_vscode
+      - file: dev_environment/windows/8_use_terminal_in_vscode
+      - file: dev_environment/windows/9_congrats
+    - file: dev_environment/mac/index
+      sections:
+      - file: dev_environment/mac/1_setup
+      - file: dev_environment/mac/2_python
+      - file: dev_environment/mac/3_virtualenv
+      - file: dev_environment/mac/4_git
+      - file: dev_environment/mac/5_github
+      - file: dev_environment/mac/6_connect_github
+      - file: dev_environment/mac/7_vscode
+      - file: dev_environment/mac/8_use_terminal_in_vscode
+      - file: dev_environment/mac/9_congrats
