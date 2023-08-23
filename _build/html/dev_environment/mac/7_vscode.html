@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../windows/5_github.html">Create a GitHub.com Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../windows/6_connect_github.html">Connect Your GitHub.com Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../windows/7_vscode.html">Install the IDE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../windows/8_use_terminal_in_vscode.html">Use MacOS Terminal in Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/8_use_terminal_in_vscode.html">Use the Command Prompt in Visual Studio Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../windows/9_congrats.html">Congratulations!</a></li>
 </ul>
 </li>
@@ -376,6 +376,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devenv-mac-install-vscode">Install Visual Studio Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-code-command-to-macos-shell">Add “code” Command to MacOS Shell</a></li>
 </ul>
             </nav>
         </div>
@@ -400,6 +401,18 @@ document.write(`
 <ol class="arabic simple">
 <li><p>If you have not already, <a class="reference external" href="https://code.visualstudio.com/download">download and install Visual Studio Code</a>. Choose the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> version for your processor type.</p></li>
 </ol>
+</section>
+<section id="add-code-command-to-macos-shell">
+<span id="devenv-mac-vscode-shell"></span><h2>Add “code” Command to MacOS Shell<a class="headerlink" href="#add-code-command-to-macos-shell" title="Permalink to this heading">#</a></h2>
+<p>You will now set up a direct connection between MacOS’ Terminal and Visual Studio Code by adding a special <code class="docutils literal notranslate"><span class="pre">code</span></code> command that you can run from the command line.</p>
+<ol class="arabic simple">
+<li><p>Open Visual Studio Code.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">p</span></code> to open the command palette, then type “install code”, and then click <strong>Shell command: Install ‘code’ command in PATH</strong>.</p></li>
+<li><p>Restart your shell by typing the command <code class="docutils literal notranslate"><span class="pre">source/~.zshrc</span></code> into a MacOS Terminal window</p></li>
+<li><p>In MacOS Terminal, type <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">test.txt</span></code>.</p></li>
+</ol>
+<p>This will create a file named <code class="docutils literal notranslate"><span class="pre">test.txt</span></code> in whatever the active directory was in your Terminal. Visual Studio Code should also launch and open the file, ready for you to start entering text.</p>
+<p>You can delete the <code class="docutils literal notranslate"><span class="pre">test.txt</span></code> file, as we will not use it.</p>
 </section>
 </section>
 
@@ -471,6 +484,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devenv-mac-install-vscode">Install Visual Studio Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-code-command-to-macos-shell">Add “code” Command to MacOS Shell</a></li>
 </ul>
   </nav></div>
 

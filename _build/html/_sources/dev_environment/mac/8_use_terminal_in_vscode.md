@@ -99,8 +99,6 @@ Regardless of the method you chose above, you should be ready to write and store
 
 1. Ensure you are in your `cit30900` root directory.
 
-When you installed VS Code, it added a special command that you can use to create and open a new file with a single command.
-
 2. At the command prompt, type `code helloworld.py`.
 
 You should see a file open in the file editor at the top of the VS Code window.
