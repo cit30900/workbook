@@ -6,7 +6,7 @@ GitHub.com is a platform where you can host and share Git repositories. You may 
 If you already have an account on GitHub.com, you can use it. You do **NOT** need a separate account for each course.
 ```
 
-(devenv:mac:create_github)=
+(devenv:windows:create_github)=
 ## Create a (Free) Account on GitHub.com
 
 1. Visit [GitHub.com](https://github.com) to create a free account.
@@ -19,7 +19,7 @@ Use your SCHOOL EMAIL (@iupui.edu or @iu.edu) for this account! This will help y
 
 2. If you already have an account on GitHub.com with your school email attached, move to the next section.
 
-(devenv:mac:create_github_student)=
+(devenv:windows:create_github_student)=
 ## Sign Up for GitHub Student Benefits
 
 1. Visit [GitHub's Global Campus site](https://education.github.com/students) to enroll for free student benefits.
