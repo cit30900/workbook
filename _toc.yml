@@ -28,3 +28,8 @@ parts:
       - file: dev_environment/mac/7_vscode
       - file: dev_environment/mac/8_use_terminal_in_vscode
       - file: dev_environment/mac/9_congrats
+  - caption: Python Support
+    chapters:
+    - file: python/collect_input/index
+      sections:
+      - file: python/collect_input/while_loop
