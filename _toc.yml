@@ -33,3 +33,8 @@ parts:
     - file: python/collect_input/index
       sections:
       - file: python/collect_input/while_loop
+    - file: python/data_structures/index
+      sections:
+      - file: python/data_structures/list_import
+      - file: python/data_structures/list_comprehensions
+      - file: python/data_structures/list_parsing
