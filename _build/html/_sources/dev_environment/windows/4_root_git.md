@@ -1,4 +1,4 @@
-# Establish a Root Directory and Install Git
+# Establish a Root Directory and Install Git on Windows
 
 (devenv:windows:rootdirectory)=
 ## Create a Root Directory 
