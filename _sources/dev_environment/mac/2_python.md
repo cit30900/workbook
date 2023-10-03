@@ -25,6 +25,17 @@ python3 --version
 
 This should return a message similar to `Python 3.11.4`. (Your version number may be higher, which is fine.)
 
+(devenv:mac:default_python)=
+## Set Your Python Version as Default
+
+MacOS comes with Python pre-installed and will use that (old, outdated) version by default. You need to update the OS so that it knows to use the version of Python you just installed.
+
+1. Enter the following command in the Terminal:
+
+```
+brew unlink python && brew link python
+```
+
 (devenv:mac:alias_python)=
 ## Create Aliases for pip and Python
 
