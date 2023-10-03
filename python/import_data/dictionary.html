@@ -453,8 +453,41 @@ document.write(`
 <p>If your CSV file contains a row of headings that label the data in each column of the CSV, you can import that entire structure to Python so that each value is labeled with its row heading.</p>
 <p>This will generate a Python <strong>dictionary</strong> object for each row in the CSV file. The dictionary will contain <strong>key:value pairs</strong>, where the <em>key</em> is the row heading and the <em>value</em> is the content of that column in the current row of the CSV file.</p>
 <p>Use the following code to import a CSV file to a Python list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">csv</span> <span class="kn">import</span> <span class="n">DictReader</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;myfile.csv&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="c1"># Create a DictReader object that will read the contents of the CSV file as dictionaries</span>
+    <span class="n">dict_reader</span> <span class="o">=</span> <span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="c1"># Create an iterable element that will hold the contents of the CSV file as a list</span>
+    <span class="c1"># This will result in a LIST OF DICTIONARIES</span>
+    <span class="n">list_of_dict</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dict_reader</span><span class="p">)</span>
+    <span class="c1"># Loop through the list and view the contents of the file</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">list_of_dict</span><span class="p">:</span>
+        <span class="c1"># &#39;k&#39; refers to the &#39;key&#39; and &#39;v&#39; refers to the &#39;value&#39;</span>
+        <span class="c1"># Note that you retrieve the key:value pairs through the dictionary&#39;s `.items()` method</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Each <strong>key-value pair</strong> of <em>each</em> row will be printed to the screen.</p>
 <p><strong>However</strong>, you cannot access the values in the list outside of your <code class="docutils literal notranslate"><span class="pre">with</span></code> statement. You should assign the value of the DictReader to a Python list.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">csv</span> <span class="kn">import</span> <span class="n">DictReader</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;myfile.csv&#39;</span>
+<span class="n">nameslist</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="c1"># Create a DictReader object that will read the contents of the CSV file as dictionaries</span>
+    <span class="n">dict_reader</span> <span class="o">=</span> <span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="c1"># Create an iterable element that will hold the contents of the CSV file as a list</span>
+    <span class="c1"># This will result in a LIST OF DICTIONARIES</span>
+    <span class="n">list_of_dict</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dict_reader</span><span class="p">)</span>
+    <span class="c1"># Loop through the list and view the contents of the file</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">list_of_dict</span><span class="p">:</span>
+        <span class="n">namelist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The above code creates a list called <code class="docutils literal notranslate"><span class="pre">nameslist</span></code> that holds a dictionary that represents each row of the CSV file.</p>
 <p>Let’s assume this is the content of your CSV file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span>
@@ -472,6 +505,10 @@ document.write(`
 <section id="accessing-values-in-a-list-of-dictionaries">
 <span id="python-data-import-csv-dictionary-access"></span><h2>Accessing Values in a List of Dictionaries<a class="headerlink" href="#accessing-values-in-a-list-of-dictionaries" title="Permalink to this heading">#</a></h2>
 <p>Given the example above, you can access the data stored in each dictionary by looping through the list and then using the <em>square bracket notation</em> of a dictionary.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nameslist</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="p">[</span><span class="s1">&#39;firstname&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name</span><span class="p">[</span><span class="s1">&#39;lastname&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The code above will print the following to the screen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fred</span> <span class="n">Rogers</span>
 <span class="n">Shirley</span> <span class="n">Bassey</span>

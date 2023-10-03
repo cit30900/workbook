@@ -25,7 +25,7 @@ This will generate a Python **dictionary** object for each row in the CSV file. 
 
 Use the following code to import a CSV file to a Python list:
 
-```{code-cell}
+```
 from csv import DictReader
 
 filename = 'myfile.csv'
@@ -47,7 +47,7 @@ Each **key-value pair** of *each* row will be printed to the screen.
 
 **However**, you cannot access the values in the list outside of your `with` statement. You should assign the value of the DictReader to a Python list.
 
-```{code-cell}
+```
 from csv import DictReader
 
 filename = 'myfile.csv'
@@ -84,7 +84,7 @@ Each row of the CSV is its own dictionary, and all of the dictionaries are neste
 
 Given the example above, you can access the data stored in each dictionary by looping through the list and then using the *square bracket notation* of a dictionary.
 
-```{code-cell}
+```
 for name in nameslist:
     print(f"{name['firstname']} {name['lastname']}")
 ```
